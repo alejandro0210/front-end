@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button style="color:black;margin-right: 300px;" title="Return" defaultHref="/" >
+    </ion-back-button>
+    <ion-title>REGISTER</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!--Primeramente, tenemos el contenedor que sería el cuerpo de la aplicación, a esta se le agrego una class llamada background la cual contiene el fondo del contenedor-->
+<ion-content class="background">
+<br><br>
+
+
+  <form [formGroup]="formReg" (ngSubmit)="register()">
+
+    <table align="center"><tr><th></th> <ion-label>Ingresa tus datos para registrarte</ion-label></tr></table><br><br>
+
+    <ion-item fill="solid">
+      <ion-label position="stacked">Usuario</ion-label>
+      <ion-input style="font-size: 15px;" type="Text" ngModel User formControlName="name"></ion-input>
+      <ion-note slot="helper">Enter a valid User</ion-note>
+      <ion-note slot="error">Invalid User</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input style="font-size: 15px;" type="email" ngModel email formControlName="email"></ion-input>
+      <ion-note slot="helper">Enter a valid email</ion-note>
+      <ion-note slot="error">Invalid email</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="stacked">Constraseña</ion-label>
+      <ion-input style="font-size: 15px;" type="email" type="password" ngModel password formControlName="password"></ion-input>
+      <ion-note slot="helper">Enter a valid password</ion-note>
+      <ion-note slot="error">Invalid password</ion-note>
+    </ion-item>
+<br><br>
+    <table align="center"><tr><th></th>  <ion-button  type="submit" style="width: 300px;">Registrar</ion-button> </tr></table><br><br>
+   
+  </form>
+
+        
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>FOOTER</ion-title>
+  </ion-toolbar>
+</ion-footer>
